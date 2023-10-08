@@ -1,0 +1,22 @@
+<p>student works!</p>
+<table>
+
+   
+    <tr  *ngFor="let item of data">
+      <th>{{ item.id }}</th>
+      <th>{{ item.name }}</th>
+      <th>{{ item.email }}</th>
+      <th><button (click) = "edit(item)"> Edit</button> <button> delete</button></th>
+    </tr>
+
+  </table> 
+
+<form>
+    <label for="fname">name:</label><br>
+    <input type="text" id="fname" [(ngModel)]="value.name" name="name"><br>
+    <label for="lname">email:</label><br>
+    <input type="text" id="lname" [(ngModel)]="value.email" name="email">
+    <br>
+    <button (click)="store()"> submit</button>
+  </form> 
+  
